@@ -1,13 +1,13 @@
 package sistemaCinema.controller;
 
 import sistemaCinema.model.Usuario;
-import sistemaCinema.repository.RepositorioUsuarios;
+import sistemaCinema.repository.MemorialRepositorioUsuarios;
 import sistemaCinema.service.ServicoAutenticacao;
 
 public class FacadeAutenticacao {
     private ServicoAutenticacao servicoAutenticacao;
 
-    public FacadeAutenticacao(RepositorioUsuarios repositorioUsuarios) {
+    public FacadeAutenticacao(MemorialRepositorioUsuarios repositorioUsuarios) {
         this.servicoAutenticacao = new ServicoAutenticacao(repositorioUsuarios);
     }
 

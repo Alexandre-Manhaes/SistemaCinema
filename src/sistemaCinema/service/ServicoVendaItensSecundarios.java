@@ -1,15 +1,15 @@
 package sistemaCinema.service;
 
 import sistemaCinema.model.ItemSecundario;
-import sistemaCinema.repository.RepositorioItensSecundarios;
+import sistemaCinema.repository.MemorialRepositorioItensSecundarios;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ServicoVendaItensSecundarios {
-    private RepositorioItensSecundarios repositorioItens;
+    private MemorialRepositorioItensSecundarios repositorioItens;
     private List<ItemSecundario> itensVendidos = new ArrayList<>();
 
-    public ServicoVendaItensSecundarios(RepositorioItensSecundarios repositorioItens) {
+    public ServicoVendaItensSecundarios(MemorialRepositorioItensSecundarios repositorioItens) {
         this.repositorioItens = repositorioItens;
     }
 

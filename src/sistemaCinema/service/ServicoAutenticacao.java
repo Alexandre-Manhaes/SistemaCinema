@@ -1,12 +1,12 @@
 package sistemaCinema.service;
 
 import sistemaCinema.model.Usuario; // Importa a classe Usuario
-import sistemaCinema.repository.RepositorioUsuarios; // Importa o repositório de usuários
+import sistemaCinema.repository.MemorialRepositorioUsuarios; // Importa o repositório de usuários
 
 public class ServicoAutenticacao { 
-    private RepositorioUsuarios repositorioUsuarios; // Declara o atributo para acessar os usuários
+    private MemorialRepositorioUsuarios repositorioUsuarios; // Declara o atributo para acessar os usuários
 
-    public ServicoAutenticacao(RepositorioUsuarios repositorioUsuarios) { // Construtor que recebe o repositório de usuários
+    public ServicoAutenticacao(MemorialRepositorioUsuarios repositorioUsuarios) { // Construtor que recebe o repositório de usuários
         this.repositorioUsuarios = repositorioUsuarios; // Inicializa o atributo com o repositório recebido
     }
 
