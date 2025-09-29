@@ -1,5 +1,31 @@
 package sistemaCinema.service;
 
-public class ServicoVendaItensSecundarios {
+import sistemaCinema.model.ItemSecundario;
+import sistemaCinema.repository.RepositorioItensSecundarios;
+import java.util.ArrayList;
+import java.util.List;
 
+public class ServicoVendaItensSecundarios {
+    private RepositorioItensSecundarios repositorioItens;
+    private List<ItemSecundario> itensVendidos = new ArrayList<>();
+
+    public ServicoVendaItensSecundarios(RepositorioItensSecundarios repositorioItens) {
+        this.repositorioItens = repositorioItens;
+    }
+
+    public boolean venderItem(String nomeItem) {
+        ItemSecundario item = repositorioItens.buscarPorNome(nomeItem);
+        if (item != null) {
+            itensVendidos.add(item);
+            System.out.println("Item vendido: " + item.getNome() + " - R$" + item.getPreco());
+            return true;
+        } else {
+            System.out.println("Item não encontrado no repositório!");
+            return false;
+        }
+    }
+
+    public List<ItemSecundario> getItensVendidos() {
+        return new ArrayList<>(itensVendidos);
+    }
 }
